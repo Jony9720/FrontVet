@@ -9,10 +9,11 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            console.log('API URL:', process.env.REACT_APP_API_URL);
+            const backendUrl = 'https://back-vet-lovat.vercel.app'; // URL del backend
+            console.log('Backend URL:', backendUrl);
             console.log('Nombre:', nombre);
             console.log('Password:', password);
-            const response = await fetch(`${process.env.REACT_APP_API_URL}/auth/login`, {
+            const response = await fetch(`${backendUrl}/api/auth/login`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ nombre, password }),
