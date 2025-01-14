@@ -9,6 +9,9 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
+            console.log('API URL:', process.env.REACT_APP_API_URL);
+            console.log('Nombre:', nombre);
+            console.log('Password:', password);
             const response = await fetch(`${process.env.REACT_APP_API_URL}/auth/login`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
