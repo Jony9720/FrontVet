@@ -1,0 +1,67 @@
+.servicios-container {
+    padding: 20px;
+}
+
+.servicios-list {
+    list-style: none;
+    padding: 0;
+}
+
+.servicio-item {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.servicio-item p {
+    margin: 5px 0;
+}
+
+.servicios-estado-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.servicios-estado-buttons button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #fff;
+}
+
+.servicios-estado-buttons button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.servicios-estado-buttons button:nth-child(1) {
+    background: #007bff; /* Azul */  
+}
+
+.servicios-estado-buttons button:nth-child(2) {
+    background: #007bff; /* Azul */
+}
+
+.servicios-estado-buttons button:nth-child(3) {
+    background: #ffc107; /* Amarillo */
+}
+
+.servicios-estado-buttons button:nth-child(4) {
+    background: #28a745; /* Verde */ 
+}
+
+.servicios-estado-buttons button:nth-child(5) {
+    background: #FF0000; /* Rojo */  
+}
+
+.servicios-estado-buttons button:nth-child(6) {
+    background: #800080; /* Morado */
+}
+
+.servicios-estado-buttons button:nth-child(7) {
+    background: #FF8C00; /* gris */
+}

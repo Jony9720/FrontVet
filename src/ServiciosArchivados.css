@@ -1,0 +1,58 @@
+.archivados-container {
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+.archivados-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.archivados-container li {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.archivado-item {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.archivado-item p {
+    margin: 5px 0;
+}
+
+.botones-container {
+    display: flex; /* Los botones estarán alineados horizontalmente */
+    gap: 10px; /* Espaciado entre los botones */
+    margin-top: 10px; /* Separación del resto del contenido */
+}
+
+.detalles-boton, 
+.descargar-boton {
+    background-color: #007bff; /* Cambia si es necesario */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.detalles-boton:hover {
+    background-color: #0056b3;
+}
+
+.descargar-boton {
+    background-color: #28a745;
+}
+
+.descargar-boton:hover {
+    background-color: #218838;
+}
+

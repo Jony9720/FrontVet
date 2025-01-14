@@ -1,0 +1,110 @@
+.registro-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.regresar-button {
+    display: inline-block;
+    background-color: #6c757d;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.regresar-button:hover {
+    background-color: #5a6268;
+}
+
+.registro-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    color: #333;
+}
+
+input, select, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+textarea {
+    resize: none;
+    height: 80px;
+}
+
+.submit-button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: center;
+}
+
+.submit-button:hover {
+    background-color: #218838;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espaciado entre los elementos */
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Espaciado entre el texto y el checkbox */
+}
+
+/* Estilo para el botón de borrar */
+.borrar-firma-button {
+    background-color: #dc3545;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.borrar-firma-button:hover {
+    background-color: #c82333;
+}
+
+/* Estilo para el botón de guardar firma */
+.guardar-firma-button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.guardar-firma-button:hover {
+    background-color: #218838;
+}

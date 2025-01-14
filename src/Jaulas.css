@@ -1,0 +1,111 @@
+/* Estilo general para la sección de jaulas */
+.jaulas-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Encabezado */
+.jaulas-container h1 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+/* Formularios */
+.jaulas-form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.jaulas-form input {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex: 1;
+}
+
+.jaulas-form button {
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.jaulas-form button:hover {
+    background-color: #218838;
+}
+
+/* Lista de jaulas */
+.jaulas-list {
+    list-style: none;
+    padding: 0;
+}
+
+.jaulas-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.jaulas-list li:nth-child(even) {
+    background-color: #f1f1f1;
+}
+
+/* Botones de acciones */
+.jaulas-list button {
+    margin-left: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.jaulas-list button:first-child {
+    background-color: #ffc107;
+    color: white;
+}
+
+.jaulas-list button:first-child:hover {
+    background-color: #e0a800;
+}
+
+.jaulas-list button:last-child {
+    background-color: #dc3545;
+    color: white;
+}
+
+.jaulas-list button:last-child:hover {
+    background-color: #c82333;
+}
+
+.back-button {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #5a6268;
+}

@@ -1,0 +1,147 @@
+.mascotas-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.mascotas-container h1 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.mascotas-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.mascotas-form input {
+    flex: 1 1 calc(50% - 10px);
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.mascotas-form button {
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    flex: 1 1 100%;
+    margin-top: 10px;
+}
+
+.mascotas-form button:hover {
+    background-color: #218838;
+}
+
+.mascotas-list {
+    list-style: none;
+    padding: 0;
+}
+
+.mascotas-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.mascotas-list li:nth-child(even) {
+    background-color: #f1f1f1;
+}
+
+.mascotas-list button {
+    margin-left: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.mascotas-list button:first-of-type {
+    background-color: #ffc107;
+    color: black;
+}
+
+.mascotas-list button:first-of-type:hover {
+    background-color: #e0a800;
+}
+
+.mascotas-list button:last-of-type {
+    background-color: #dc3545;
+    color: white;
+}
+
+.mascotas-list button:last-of-type:hover {
+    background-color: #c82333;
+}
+
+.back-button {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #5a6268;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.mascota-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.mascota-info {
+    flex: 1;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-right: 20px;
+    word-wrap: break-word; /* Permite que el texto largo se divida en varias líneas */
+}
+
+.mascota-actions {
+    display: flex;
+    gap: 10px; /* Espaciado entre los botones */
+}
+
+.mascota-actions .btn {
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+
