@@ -25,13 +25,13 @@ const Mascotas = () => {
     };
 
     const handleCreate = async () => {
-        if (!nombre || !peso || !propietarioNombre || !propietarioContacto || !domicilio) {
+        if (!nombre || !propietarioNombre || !propietarioContacto || !domicilio) {
             alert('Por favor, completa todos los campos.');
             return;
         }
         await createMascota({
             nombre,
-            peso,
+            peso: peso || null,
             propietario_nombre: propietarioNombre,
             propietario_contacto: propietarioContacto,
             domicilio,
@@ -52,11 +52,11 @@ const Mascotas = () => {
     const handleEdit = (mascota) => {
         setEditing(true);
         setCurrentMascota(mascota);
-        setNombre(mascota.nombre);
-        setPeso(mascota.peso);
-        setPropietarioNombre(mascota.propietario_nombre);
-        setPropietarioContacto(mascota.propietario_contacto);
-        setDomicilio(mascota.domicilio);
+        setNombre(mascota.nombre || '');
+        setPeso(mascota.peso !== null && mascota.peso !== undefined ? mascota.peso : '');
+        setPropietarioNombre(mascota.propietario_nombre || '');
+        setPropietarioContacto(mascota.propietario_contacto || '');
+        setDomicilio(mascota.domicilio || '');
     };
 
     const handleUpdate = async () => {
@@ -64,7 +64,7 @@ const Mascotas = () => {
 
         await updateMascota(currentMascota.id, {
             nombre,
-            peso,
+            peso: peso ? parseFloat(peso) : null,
             propietario_nombre: propietarioNombre,
             propietario_contacto: propietarioContacto,
             domicilio,
@@ -134,7 +134,7 @@ const Mascotas = () => {
                 <input
                     type="number"
                     placeholder="Peso de la mascota"
-                    value={peso}
+                    value={peso !== null && peso !== undefined ? peso : ''}
                     onChange={(e) => setPeso(e.target.value)}
                 />
                 <input
