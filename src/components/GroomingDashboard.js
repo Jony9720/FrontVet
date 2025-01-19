@@ -51,7 +51,7 @@ const GroomingDashboard = () => {
                 {coloresJaulas.map((color) => (
                     <div key={color} className="column">
                         <h2>{color}</h2>
-                        {[1, 2, 3, 4, 5].map((numero) => (
+                        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25].map((numero) => (
                             <div key={numero} className="cell">
                                 <h3>Jaula {numero}</h3>
                                 {servicios
