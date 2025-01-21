@@ -52,11 +52,11 @@ const Mascotas = () => {
     const handleEdit = (mascota) => {
         setEditing(true);
         setCurrentMascota(mascota);
-        setNombre(mascota.nombre || '');
+        setNombre(mascota.nombre);
         setPeso(mascota.peso !== null && mascota.peso !== undefined ? mascota.peso : '');
-        setPropietarioNombre(mascota.propietario_nombre || '');
-        setPropietarioContacto(mascota.propietario_contacto || '');
-        setDomicilio(mascota.domicilio || '');
+        setPropietarioNombre(mascota.propietario_nombre);
+        setPropietarioContacto(mascota.propietario_contacto);
+        setDomicilio(mascota.domicilio);
     };
 
     const handleUpdate = async () => {
