@@ -80,6 +80,12 @@ const ServiciosArchivados = () => {
     } else {
         filteredServicios.forEach((servicio, index) => {
             // Añade un encabezado para cada servicio
+
+            if (y > 280) {
+                doc.addPage();
+                y = 20; // Restablece la posición inicial
+            }
+
             y += 10;
             doc.setFontSize(14);
             doc.setFont('helvetica', 'bold');
@@ -104,10 +110,7 @@ const ServiciosArchivados = () => {
             y += 6;
 
             // Comprueba si hay que mover a una nueva página
-            if (y > 280) {
-                doc.addPage();
-                y = 20; // Restablece la posición inicial
-            }
+            
         });
     }
 
