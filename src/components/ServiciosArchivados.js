@@ -28,15 +28,20 @@ const ServiciosArchivados = () => {
     }, []); // Ejecutar solo al montar el componente    
 
     useEffect(() => {
-        // Filtrar por texto de búsqueda
         const lowerSearchText = searchText.toLowerCase();
-        const serviciosFiltrados = archivados.filter(
-            (servicio) =>
-                servicio.Mascota?.nombre?.toLowerCase().includes(lowerSearchText) ||
-                servicio.Mascota?.propietario_nombre?.toLowerCase().includes(lowerSearchText)
-        );
+    
+        const serviciosFiltrados = archivados.filter((servicio) => {
+            const nombreMascota = servicio.Mascota?.nombre?.toLowerCase();
+            const propietarioNombre = servicio.Mascota?.propietario_nombre?.toLowerCase();
+    
+            return (
+                (nombreMascota && nombreMascota.includes(lowerSearchText)) ||
+                (propietarioNombre && propietarioNombre.includes(lowerSearchText))
+            );
+        });
+    
         setFilteredServicios(serviciosFiltrados);
-    }, [searchText, archivados]);
+    }, [searchText, archivados]);    
 
     const handleSearchChange = (e) => {
         setSearchText(e.target.value);
@@ -231,7 +236,7 @@ const ServiciosArchivados = () => {
                         <li key={servicio.id} className="archivado-item">
                             <p><strong>Mascota:</strong> {servicio.Mascota?.nombre || 'Sin informacion'}</p>
                             <p><strong>Propietario:</strong> {servicio.Mascota?.propietario_nombre || 'Sin informacion'}</p>
-                            <p><strong>Peluquero:</strong> {servicio.peluquero?.nombre}</p>
+                            <p><strong>Peluquero:</strong> {servicio.peluquero?.nombre || 'Sin informacion'}</p>
                             <p><strong>Fecha y Hora de Ingreso:</strong> {new Date(servicio.fecha_ingreso).toLocaleString()}</p>
                             <p><strong>Estado:</strong> {servicio.estado}</p>
                             <div className="botones-container">
