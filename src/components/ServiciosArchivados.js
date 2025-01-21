@@ -89,11 +89,11 @@ const ServiciosArchivados = () => {
             y += 8;
             doc.setFontSize(12);
             doc.setFont('helvetica', 'normal');
-            doc.text(`Mascota: ${servicio.Mascota.nombre}`, margenX, y);
+            doc.text(`Mascota: ${servicio.Mascota?.nombre}`, margenX, y);
             y += 6;
-            doc.text(`Propietario: ${servicio.Mascota.propietario_nombre}`, margenX, y);
+            doc.text(`Propietario: ${servicio.Mascota?.propietario_nombre}`, margenX, y);
             y += 6;
-            doc.text(`Peluquero: ${servicio.peluquero.nombre}`, margenX, y);
+            doc.text(`Peluquero: ${servicio.peluquero?.nombre}`, margenX, y);
             y += 6;
             doc.text(`Fecha y Hora de Ingreso: ${new Date(servicio.fecha_ingreso).toLocaleString()}`, margenX, y);
             y += 6;
