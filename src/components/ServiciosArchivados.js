@@ -166,7 +166,7 @@ const ServiciosArchivados = () => {
         agregarTextoNegrita('Propietario', servicio.Mascota?.propietario_nombre);
         agregarTextoNegrita('Domicilio del Propietario', servicio.Mascota?.domicilio);
         agregarTextoNegrita('Número de Contacto', servicio.Mascota?.propietario_contacto);
-        agregarTextoNegrita('Peluquero', servicio.peluquero.nombre);
+        agregarTextoNegrita('Peluquero', servicio.peluquero?.nombre);
         agregarTextoNegrita('Fecha y Hora de Ingreso', new Date(servicio.fecha_ingreso).toLocaleString());
         agregarTextoNegrita('Tipo de Corte', servicio.tipo_corte || 'No especificado');
         agregarTextoNegrita('Observaciones', servicio.observaciones || 'Ninguna');
