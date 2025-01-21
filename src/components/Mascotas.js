@@ -94,8 +94,8 @@ const Mascotas = () => {
     useEffect(() => {
         const filtered = mascotas.filter(
             (m) =>
-                m.nombre.toLowerCase().includes(searchText.toLowerCase()) || // Coincide con el nombre de la mascota
-                m.propietario_nombre.toLowerCase().includes(searchText.toLowerCase()) // Coincide con el nombre del propietario
+                m.nombre?.toLowerCase().includes(searchText.toLowerCase()) || // Coincide con el nombre de la mascota
+                m.propietario_nombre?.toLowerCase().includes(searchText.toLowerCase()) // Coincide con el nombre del propietario
         );
         setFilteredMascotas(filtered);
     }, [searchText, mascotas]);

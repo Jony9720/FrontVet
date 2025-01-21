@@ -230,7 +230,7 @@ const ServiciosArchivados = () => {
                     {filteredServicios.map((servicio) => (
                         <li key={servicio.id} className="archivado-item">
                             <p><strong>Mascota:</strong> {servicio.Mascota?.nombre || 'Sin informacion'}</p>
-                            <p><strong>Propietario:</strong> {servicio.Mascota?.propietario_nombre}</p>
+                            <p><strong>Propietario:</strong> {servicio.Mascota?.propietario_nombre || 'Sin informacion'}</p>
                             <p><strong>Peluquero:</strong> {servicio.peluquero.nombre}</p>
                             <p><strong>Fecha y Hora de Ingreso:</strong> {new Date(servicio.fecha_ingreso).toLocaleString()}</p>
                             <p><strong>Estado:</strong> {servicio.estado}</p>
