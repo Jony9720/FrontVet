@@ -157,10 +157,10 @@ const ServiciosArchivados = () => {
         };
     
         agregarTextoNegrita('Mascota', servicio.Mascota?.nombre || 'No especificado');
-        agregarTextoNegrita('Peso de la Mascota', `${servicio.Mascota.peso} kg`);
-        agregarTextoNegrita('Propietario', servicio.Mascota.propietario_nombre);
-        agregarTextoNegrita('Domicilio del Propietario', servicio.Mascota.domicilio);
-        agregarTextoNegrita('Número de Contacto', servicio.Mascota.propietario_contacto);
+        agregarTextoNegrita('Peso de la Mascota', `${servicio.Mascota?.peso} kg`);
+        agregarTextoNegrita('Propietario', servicio.Mascota?.propietario_nombre);
+        agregarTextoNegrita('Domicilio del Propietario', servicio.Mascota?.domicilio);
+        agregarTextoNegrita('Número de Contacto', servicio.Mascota?.propietario_contacto);
         agregarTextoNegrita('Peluquero', servicio.peluquero.nombre);
         agregarTextoNegrita('Fecha y Hora de Ingreso', new Date(servicio.fecha_ingreso).toLocaleString());
         agregarTextoNegrita('Tipo de Corte', servicio.tipo_corte || 'No especificado');
@@ -229,8 +229,8 @@ const ServiciosArchivados = () => {
                 <ul>
                     {filteredServicios.map((servicio) => (
                         <li key={servicio.id} className="archivado-item">
-                            <p><strong>Mascota:</strong> {servicio.Mascota.nombre}</p>
-                            <p><strong>Propietario:</strong> {servicio.Mascota.propietario_nombre}</p>
+                            <p><strong>Mascota:</strong> {servicio.Mascota?.nombre || 'Sin informacion'}</p>
+                            <p><strong>Propietario:</strong> {servicio.Mascota?.propietario_nombre}</p>
                             <p><strong>Peluquero:</strong> {servicio.peluquero.nombre}</p>
                             <p><strong>Fecha y Hora de Ingreso:</strong> {new Date(servicio.fecha_ingreso).toLocaleString()}</p>
                             <p><strong>Estado:</strong> {servicio.estado}</p>
