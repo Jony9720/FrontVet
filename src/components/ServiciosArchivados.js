@@ -86,10 +86,10 @@ const ServiciosArchivados = () => {
                 y = 20; // Restablece la posición inicial
             }
 
-            y += 10;
             doc.setFontSize(14);
             doc.setFont('helvetica', 'bold');
             doc.text(`Servicio ${index + 1}`, margenX, y);
+            y += 10;
 
             // Detalles del servicio
             y += 8;
@@ -102,12 +102,12 @@ const ServiciosArchivados = () => {
             doc.text(`Peluquero: ${servicio.peluquero?.nombre}`, margenX, y);
             y += 6;
             doc.text(`Fecha y Hora de Ingreso: ${new Date(servicio.fecha_ingreso).toLocaleString()}`, margenX, y);
-            y += 6;
+            y += 10;
 
             // Línea separadora
             doc.setDrawColor(200, 200, 200); // Color gris claro
             doc.line(margenX, y, 200, y);
-            y += 6;
+            y += 10;
 
             // Comprueba si hay que mover a una nueva página
             
