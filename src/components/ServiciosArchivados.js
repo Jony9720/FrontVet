@@ -32,8 +32,8 @@ const ServiciosArchivados = () => {
         const lowerSearchText = searchText.toLowerCase();
         const serviciosFiltrados = archivados.filter(
             (servicio) =>
-                servicio.Mascota.nombre.toLowerCase().includes(lowerSearchText) ||
-                servicio.Mascota.propietario_nombre.toLowerCase().includes(lowerSearchText)
+                servicio.Mascota?.nombre?.toLowerCase().includes(lowerSearchText) ||
+                servicio.Mascota?.propietario_nombre?.toLowerCase().includes(lowerSearchText)
         );
         setFilteredServicios(serviciosFiltrados);
     }, [searchText, archivados]);
@@ -156,7 +156,7 @@ const ServiciosArchivados = () => {
             y += 8;
         };
     
-        agregarTextoNegrita('Mascota', servicio.Mascota.nombre);
+        agregarTextoNegrita('Mascota', servicio.Mascota?.nombre || 'No especificado');
         agregarTextoNegrita('Peso de la Mascota', `${servicio.Mascota.peso} kg`);
         agregarTextoNegrita('Propietario', servicio.Mascota.propietario_nombre);
         agregarTextoNegrita('Domicilio del Propietario', servicio.Mascota.domicilio);
