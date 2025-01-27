@@ -145,7 +145,7 @@ const Mascotas = () => {
                 />
                 <input
                     type="text"
-                    placeholder="Contacto del propietario"
+                    placeholder="Contacto(s) del propietario (separar por comas)"
                     value={propietarioContacto}
                     onChange={(e) => setPropietarioContacto(e.target.value)}
                 />
