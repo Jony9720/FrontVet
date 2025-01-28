@@ -131,8 +131,8 @@ const Servicios = () => {
                             <>
                                 <p><strong>Mascota:</strong> {servicio.Mascota.nombre} - {servicio.Mascota.peso}kg</p>
                                 <p><strong>Jaula:</strong> {servicio.Jaula?.color || 'Sin color'} - {servicio.Jaula?.numero || 'Sin número'}</p>
-                                <p><strong>Peluquero:</strong> {servicio.peluquero.nombre}</p>
-                                <p><strong>Recepcionista:</strong> {servicio.recepcionista.nombre}</p>
+                                <p><strong>Peluquero:</strong> {servicio.peluquero?.nombre || 'Sin peluquero'}</p>
+                                <p><strong>Recepcionista:</strong> {servicio.recepcionista?.nombre || 'Sin recepcionista'}</p>
                                 <p><strong>Estado:</strong> {servicio.estado}</p>
                                 {servicio.estado === 'finalizado' && (
                                 <p style={{ color: 'red', fontWeight: 'bold' }}>
