@@ -63,8 +63,8 @@ const GroomingDashboard = () => {
                                     .map((servicio) => (
                                         <div key={servicio.id} className="servicio-card">
                                             <p><strong>Mascota:</strong> {servicio.Mascota?.nombre || 'Sin asignar'}</p>
-                                            <p><strong>Peluquero:</strong> {servicio.peluquero.nombre || 'Sin asignar'}</p>
-                                            <p><strong>Recepcionista:</strong> {servicio.recepcionista.nombre || 'Sin asignar'}</p>
+                                            <p><strong>Peluquero:</strong> {servicio.peluquero?.nombre || 'Sin asignar'}</p>
+                                            <p><strong>Recepcionista:</strong> {servicio.recepcionista?.nombre || 'Sin asignar'}</p>
                                             <p><strong>Tipo de Corte:</strong> {servicio.tipo_corte || 'No especificado'}</p>
                                             <p><strong>Observaciones:</strong> {servicio.observaciones || 'Ninguna'}</p>
                                             <p><strong>Estado:</strong> {servicio.estado}</p>
