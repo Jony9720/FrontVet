@@ -129,7 +129,7 @@ const Servicios = () => {
                             </form>
                         ) : (
                             <>
-                                <p><strong>Mascota:</strong> {servicio.Mascota.nombre} - {servicio.Mascota.peso}kg</p>
+                                <p><strong>Mascota:</strong> {servicio.Mascota?.nombre || 'Sin nombre'} - {servicio.Mascota?.peso|| 'Sin peso'}kg</p>
                                 <p><strong>Jaula:</strong> {servicio.Jaula?.color || 'Sin color'} - {servicio.Jaula?.numero || 'Sin número'}</p>
                                 <p><strong>Peluquero:</strong> {servicio.peluquero?.nombre || 'Sin peluquero'}</p>
                                 <p><strong>Recepcionista:</strong> {servicio.recepcionista?.nombre || 'Sin recepcionista'}</p>
